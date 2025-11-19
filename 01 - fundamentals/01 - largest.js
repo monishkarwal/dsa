@@ -1,18 +1,18 @@
 const findLargest = (arr) => {
-    if(arr.length <= 1){
-        return arr[0]
+  if (arr.length <= 1) {
+    return arr[0];
+  }
+
+  // let largest = arr[0]
+  let largest = -Infinity;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      largest = arr[i];
     }
+  }
+  return largest;
+};
 
-    // let largest = arr[0]
-    let largest = -Infinity
-    for (let i = 0; i < arr.length; i++) {
-        if(arr[i] > largest) {
-            largest = arr[i]
-        }
-    }
-    return largest
-}
+const arr = [-1, 10, 7, 100, 90];
 
-const arr = [-1, 10, 7, 100, 90]
-
-console.log(findLargest(arr))
+console.log(findLargest(arr));
